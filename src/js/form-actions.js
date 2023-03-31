@@ -3,6 +3,8 @@ import { INIT_PAYLOAD } from './elements';
 import { localStorageService } from './service';
 
 export const formActions = () => {
+    document.querySelector('.time').setAttribute('min', Date.formattedDate());
+
     SHOW_BUTTON.addEventListener('click', () => {
         DIALOG.showModal();
         CLOSE_BUTTON.addEventListener('click', e => {
