@@ -22,6 +22,8 @@ export const SHOW_BUTTON = getElement('.showDialog');
 export const SORT_BUTTON = getElement('.sort');
 export const CLOSE_BUTTON = getElement('.form-row:last-child > button');
 export const DIALOG = getElement('dialog');
+export const DATA_TABLE = [];
+
 
 export const TASKS_STATUS = {
     nowe: 'nowe',
