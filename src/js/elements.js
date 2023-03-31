@@ -26,13 +26,13 @@ export const DATA_TABLE = [];
 
 
 export const TASKS_STATUS = {
-    nowe: 'nowe',
-    w_trakcie: 'w_trakcie',
-    wykonane: 'wykonane'
+    new: 'new',
+    in_process: 'in_process',
+    done: 'done'
 };
 
 export const INIT_PAYLOAD = {
     id: Math.randomNumberFromRange(1, 1000),
     date: Date.formattedDate(),
-    status: TASKS_STATUS.nowe,
+    status: TASKS_STATUS.new,
 };

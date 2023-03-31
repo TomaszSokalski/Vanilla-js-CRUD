@@ -16,8 +16,8 @@ export const tableActions = () => {
                 <td>
                     <select name="status" class="status">
                         <option value="${el.status}">${el.status}</option>
-                        <option value="w_trakcie">w_trakcie</option>
-                        <option value="wykonane">wykonane</option>
+                        <option value="in_process">in_process</option>
+                        <option value="done">done</option>
                     </select>
                 </td>
                 <td>${el.date}</td>
