@@ -10,6 +10,7 @@ export const formActions = () => {
         CLOSE_BUTTON.addEventListener('click', e => {
             e.preventDefault();
             DIALOG.close();
+            FORM.reset();
         });
     });
 
@@ -28,7 +29,7 @@ export const formActions = () => {
             setTimeout(() => {
                 LOADER.style.display = 'none';
                 history.go(0);
-            } , 1000);
+            } , 500);
             DIALOG.close()
     })
 };

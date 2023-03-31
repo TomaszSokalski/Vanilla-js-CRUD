@@ -1,3 +1,5 @@
+const getElement = (selector) => document.querySelector(selector);
+
 Math.randomNumberFromRange = function(min, max) {
     return ~~(Math.random() * (max - min) + min);
 };
@@ -11,10 +13,6 @@ Date.formattedDate = function () {
     return `${y}-${month}-${d}`;
 };
 
-const getElement = (selector) => document.querySelector(selector);
-const getElements = (selector) => document.querySelectorAll(selector);
-
-export const BUTTONS = getElements('button');
 export const TASKS_TABLE = getElement('.tasks');
 export const TABLE = getElement('.table');
 export const FORM = getElement('form');
