@@ -1,5 +1,5 @@
-import {TASKS_TABLE, TABLE, SORT_BUTTON, DATA_TABLE, LOADER} from './elements';
-import { localStorageService, getTasks, createTable } from './service'
+import { TASKS_TABLE, TABLE, SORT_BUTTON, DATA_TABLE, LOADER } from './elements';
+import { localStorageService, getTasks, createTable } from './service';
 
 export const tableActions = () => {
 
@@ -21,7 +21,7 @@ export const tableActions = () => {
             if (!window.confirm('Are you sure to remove all tasks?')) {
                 return;
             }
-            localStorageService.clear()
+            localStorageService.clear();
 
             LOADER.style.display = 'block';
             setTimeout(() => {
@@ -32,10 +32,11 @@ export const tableActions = () => {
             } , 500);
         }
     });
+
     TABLE.addEventListener('change', e => {
         const id = e.target.closest('tr').querySelector('.idValue').innerHTML;
         const changedPayload = DATA_TABLE.filter(el => el.id === +id);
-        const listenerStorageActions = () => {
+        const handleStorageActions = () => {
             localStorageService.removeItem(id);
             localStorageService.setItem(id, changedPayload[0]);
         };
@@ -45,10 +46,10 @@ export const tableActions = () => {
                 if (!window.confirm(`Change status to ${e.target.value}`)) {
                     return;
                 }
-                el.status = e.target.value
+                el.status = e.target.value;
             }
 
-            listenerStorageActions();
+            handleStorageActions();
         }
         if (e.target.classList.contains('changeOwner')) {
             for (const el of changedPayload) {
@@ -57,11 +58,11 @@ export const tableActions = () => {
                 }
             }
 
-            listenerStorageActions();
+            handleStorageActions();
         }
     });
 
-    SORT_BUTTON.addEventListener('click', e => {
+    SORT_BUTTON.addEventListener('click', () => {
         TASKS_TABLE.innerHTML = '';
         DATA_TABLE.sortByKey('id');
         createTable(DATA_TABLE, TASKS_TABLE);

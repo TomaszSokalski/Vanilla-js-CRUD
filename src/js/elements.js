@@ -6,11 +6,11 @@ Math.randomNumberFromRange = function(min, max) {
 
 Date.formattedDate = function () {
     const date = new Date();
-    const d = date.getDate().toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const y = date.getFullYear()
+    const year = date.getFullYear();
 
-    return `${y}-${month}-${d}`;
+    return `${year}-${month}-${day}`;
 };
 
 export const TASKS_TABLE = getElement('.tasks');
@@ -33,5 +33,5 @@ export const TASKS_STATUS = {
 export const INIT_PAYLOAD = {
     id: Math.randomNumberFromRange(1, 1000),
     date: Date.formattedDate(),
-    status: TASKS_STATUS.new,
+    status: TASKS_STATUS.new
 };

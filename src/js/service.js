@@ -13,7 +13,7 @@ export const localStorageService = {
     },
     clear() {
         localStorage.clear();
-    },
+    }
 };
 
 export const getTasks = table => {

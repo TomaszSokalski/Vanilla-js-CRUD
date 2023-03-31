@@ -30,7 +30,7 @@ export const formActions = () => {
                 LOADER.style.display = 'none';
                 history.go(0);
             } , 500);
-            DIALOG.close()
-    })
+            DIALOG.close();
+    });
 };
 
