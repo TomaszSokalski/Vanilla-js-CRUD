@@ -1,0 +1,21 @@
+{
+  "name": "vanilla-js-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://TomaszSokalski.github.io/Vanilla-js-CRUD",
+  "author": "Tomasz Sokalski",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
