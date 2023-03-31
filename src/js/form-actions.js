@@ -1,6 +1,6 @@
 import { DIALOG, CLOSE_BUTTON, SHOW_BUTTON, FORM } from './elements';
 import { INIT_PAYLOAD } from './elements';
-import { LOCAL_STORAGE_SERVICE } from './service';
+import { localStorageService } from './service';
 
 export const formActions = () => {
     SHOW_BUTTON.addEventListener('click', () => {
@@ -20,7 +20,7 @@ export const formActions = () => {
             formPayload[key] = value
         }
         const payLoad = {...INIT_PAYLOAD, ...formPayload};
-        LOCAL_STORAGE_SERVICE.setItem(payLoad.id , payLoad);
+        localStorageService.setItem(payLoad.id , payLoad);
 
         history.go(0);
         DIALOG.close();
