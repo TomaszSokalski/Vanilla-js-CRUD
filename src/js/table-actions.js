@@ -1,4 +1,4 @@
-import { TASKS_TABLE, TABLE, SORT_BUTTON, DATA_TABLE } from './elements';
+import {TASKS_TABLE, TABLE, SORT_BUTTON, DATA_TABLE, LOADER} from './elements';
 import { localStorageService, getTasks } from './service'
 
 export const tableActions = () => {
@@ -46,17 +46,27 @@ export const tableActions = () => {
                 return;
             }
             localStorageService.removeItem(e.target.closest('tr').querySelector('.idValue').innerHTML);
-            e.target.closest('tr')?.remove();
-            history.go(0);
+
+            LOADER.style.display = 'block';
+            setTimeout(() => {
+                LOADER.style.display = 'none';
+                e.target.closest('tr')?.remove();
+                history.go(0);
+            } , 500);
         }
         if (e.target.classList.contains('deleteAll-button')) {
             if (!window.confirm('Are you sure to remove all tasks?')) {
                 return;
             }
             localStorageService.clear()
-            e.target.closest('table').querySelector('.task')?.remove();
-            DATA_TABLE.innerHTML = 'No tasks to display';
-            history.go(0);
+
+            LOADER.style.display = 'block';
+            setTimeout(() => {
+                LOADER.style.display = 'none';
+                e.target.closest('table').querySelector('.task')?.remove();
+                TASKS_TABLE.innerHTML = 'No tasks to display';
+                history.go(0);
+            } , 500);
         }
     });
     TABLE.addEventListener('change', e => {

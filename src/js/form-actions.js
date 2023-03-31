@@ -1,4 +1,4 @@
-import { DIALOG, CLOSE_BUTTON, SHOW_BUTTON, FORM } from './elements';
+import { DIALOG, CLOSE_BUTTON, SHOW_BUTTON, FORM, LOADER } from './elements';
 import { INIT_PAYLOAD } from './elements';
 import { localStorageService } from './service';
 
@@ -22,8 +22,12 @@ export const formActions = () => {
         const payLoad = {...INIT_PAYLOAD, ...formPayload};
         localStorageService.setItem(payLoad.id , payLoad);
 
-        history.go(0);
-        DIALOG.close();
+        LOADER.style.display = 'block';
+            setTimeout(() => {
+                LOADER.style.display = 'none';
+                history.go(0);
+            } , 1000);
+            DIALOG.close()
     })
 };
 
