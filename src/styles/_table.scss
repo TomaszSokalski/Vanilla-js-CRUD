@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  background-color: var(--white);
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #5F28F8;
+  border-style: solid;
+  color: var(--black);
+  -webkit-box-shadow: 4px 2px 8px 1px var(--black);
+  box-shadow: 4px 2px 8px 1px var(--black);
+}
+
+.table td, th {
+  border-width: 2px;
+  border-color: var(--blue);
+  border-style: solid;
+  padding: 7px;
+}
+
+.table thead {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+tr {
+  text-align: center;
+}

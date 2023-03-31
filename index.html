@@ -10,6 +10,58 @@
     <script src="./src/js/main.js" defer></script>
 </head>
 <body>
+<div class="loader"><div></div><div></div><div></div><div></div></div>
 
+    <div class="wrapper">
+        <section>
+            <span>
+                <button class="showDialog btn">Add task</button>
+            </span>
+            <dialog>
+                <form class="form">
+                    <div class="form-row">
+                        <input type="text" name="title" min="3" max="50" placeholder="Task title" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea type="text" name="description" maxlength="400" min="20" placeholder="Task description" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" name="date_to" class="time" required>
+                    </div>
+                    <div class="form-row">
+                        <select name="owner" required>
+                            <option value="">choose owner</option>
+                            <option value="user_1">user_1</option>
+                            <option value="user_2">user_2</option>
+                            <option value="user_3">user_3</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <button class="btn">Add task</button>
+                    </div>
+                    <div class="form-row">
+                        <button class="btn-close">Zamknij</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+        <section>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><button class="sort btn">Sort</button></th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Date_to</th>
+                    <th>Owner</th>
+                    <th><button class="deleteAll-button btn-close">Delete All</button></th>
+                </tr>
+                </thead>
+                <tbody class="tasks"></tbody>
+            </table>
+        </section>
+    </div>
 </body>
 </html>

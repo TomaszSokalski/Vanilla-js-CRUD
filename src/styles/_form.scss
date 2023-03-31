@@ -1,0 +1,17 @@
+.form-row {
+  text-align: center;
+  padding: 10px;
+}
+
+.form-row input, select, textarea {
+  width: 90%;
+  outline: 2px solid var(--blue);
+  resize: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.form-row input, select, textarea::placeholder{
+  color: var(--black);
+}

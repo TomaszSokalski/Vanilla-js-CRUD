@@ -1,0 +1,24 @@
+.btn {
+  background-color: var(--button-background-blue);
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 6px 24px;
+  &:hover {
+    background-color: #378de5;
+
+  }
+}
+
+.btn-close {
+  background-color: var(--button-background-red);
+  border-radius:6px;
+  cursor:pointer;
+  color:#ffffff;
+  font-weight:bold;
+  padding:6px 24px;
+  &:hover {
+    background-color: #ce0100;
+  }
+}

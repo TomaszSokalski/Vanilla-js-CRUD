@@ -1,0 +1,28 @@
+@import 'form';
+@import 'table';
+@import 'buttons';
+@import 'dialog';
+@import 'loader';
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --blue: #5F28F8;
+  --button-background-blue: #79bbff;
+  --button-background-red: #fe1a00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding: 3rem;
+  width: 100vw;
+  height: 100vh;
+  & > :first-child {
+    margin-bottom: 25px;
+  }
+}
