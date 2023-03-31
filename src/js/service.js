@@ -1,4 +1,4 @@
-export const localStorageService = {
+export const LOCAL_STORAGE_SERVICE = {
     setItem(key, value) {
         localStorage.setItem(key, JSON.stringify(value));
     },
