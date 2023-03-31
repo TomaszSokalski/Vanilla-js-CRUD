@@ -1,4 +1,5 @@
 import { formActions } from './form-actions'
+import { tableActions } from './table-actions'
 
 Array.prototype.sortByKey = function (key) {
     this.sort((a, b) => {
@@ -14,3 +15,4 @@ Array.prototype.sortByKey = function (key) {
 };
 
     formActions();
+    tableActions();
