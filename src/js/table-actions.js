@@ -88,6 +88,12 @@ export const tableActions = () => {
         }
     });
 
+    SORT_BUTTON.addEventListener('click', e => {
+        TASKS_TABLE.innerHTML = '';
+        DATA_TABLE.sortByKey('id');
+        createTable(DATA_TABLE, TASKS_TABLE);
+    })
+
     getTasks(DATA_TABLE);
     createTable(DATA_TABLE, TASKS_TABLE);
 };
