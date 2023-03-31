@@ -1,15 +1,4 @@
-Date.formattedDate = function () {
-    const date = new Date();
-    const d = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const y = date.getFullYear()
-
-    return `${y}-${month}-${d}`;
-};
-
-Math.randomNumberFromRange = function(min, max) {
-    return ~~(Math.random() * (max - min) + min);
-};
+import { formActions } from './form-actions'
 
 Array.prototype.sortByKey = function (key) {
     this.sort((a, b) => {
@@ -23,3 +12,5 @@ Array.prototype.sortByKey = function (key) {
         return 0;
     })
 };
+
+    formActions();
