@@ -1,6 +1,7 @@
 @import 'form';
 @import 'table';
 @import 'buttons';
+@import 'dialog';
 
 :root {
   --black: #000000;
@@ -20,4 +21,7 @@
   padding: 3rem;
   width: 100vw;
   height: 100vh;
+  & > :first-child {
+    margin-bottom: 25px;
+  }
 }
